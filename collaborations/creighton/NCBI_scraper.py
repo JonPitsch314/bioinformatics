@@ -22,14 +22,14 @@ import os
 # In[162]:
 
 
-#df = pd.read_csv('/Users/jonlusk/Desktop/borrelia_ncbi.csv')
-#df = pd.read_csv('/Users/jonlusk/Downloads/Z7S5UA03016-Alignment-Descriptions.csv')
+#df = pd.read_csv('/Users/jonpitsch/Desktop/borrelia_ncbi.csv')
+#df = pd.read_csv('/Users/jonpitsch/Downloads/Z7S5UA03016-Alignment-Descriptions.csv')
 #species = 'Borrelia'
 #species = 'Borreliella'
 #species = 'Leptospira'
 species = 'Treponema'
-df_pull = pd.read_csv('/Users/jonlusk/Downloads/'+species+'-Alignment-Descriptions.csv')
-#df_pull= pd.read_csv('/Users/jonlusk/Downloads/0W6K3K7301N-Alignment-Descriptions.csv')
+df_pull = pd.read_csv('/Users/jonpitsch/Downloads/'+species+'-Alignment-Descriptions.csv')
+#df_pull= pd.read_csv('/Users/jonpitsch/Downloads/0W6K3K7301N-Alignment-Descriptions.csv')
 df_pull
 
 
@@ -44,7 +44,7 @@ df_pull
 # In[164]:
 
 
-df_pull.to_csv('/Users/jonlusk/Desktop/'+species+'_descriptions_with_accession_values.csv')
+df_pull.to_csv('/Users/jonpitsch/Desktop/'+species+'_descriptions_with_accession_values.csv')
 
 
 # In[165]:
@@ -130,7 +130,7 @@ for i in range(len(locus)):
  #                         id=accession_list[i])
 #    print(handle)
     records.append(SeqIO.read(handle, 'genbank'))
-    SeqIO.write(records[i], os.path.join('/Users/jonlusk/Downloads/genbank files', species+'_'+str(locus[i])+'_'+str(i)+".gbk"), "genbank")
+    SeqIO.write(records[i], os.path.join('/Users/jonpitsch/Downloads/genbank files', species+'_'+str(locus[i])+'_'+str(i)+".gbk"), "genbank")
     
     
     
@@ -163,12 +163,12 @@ strain = []
 
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
     des = genome_record.description
     #print(genome_record)
     genome_description.append(des)
     #for p in product:
-        #genome_record = SeqIO.read("/Users/jonlusk/Desktop/borrelia_CP000395.gbk", "genbank")
+        #genome_record = SeqIO.read("/Users/jonpitsch/Desktop/borrelia_CP000395.gbk", "genbank")
         #cds_feature = get_cds_feature_with_qualifier_value(genome_record, "old_locus_tag", "ECA0662")
     for j in range(0,1): #muts2
         source_feature = get_source_feature_with_qualifier_value(genome_record)
@@ -269,7 +269,7 @@ genome_description = []
 
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
     des = genome_record.description
     genome_description.append(des)
     
@@ -307,7 +307,7 @@ muts_prot = []
 muts_AA_Seq = []
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
     
     
     for j in muts:
@@ -346,7 +346,7 @@ Muts_prot = []
 Muts_AA_Seq = []
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
 
     for j in Muts:
             cds_feature = get_cds_feature_with_qualifier_value(genome_record, "product", j)
@@ -395,7 +395,7 @@ Muts2_prot = []
 Muts2_AA_Seq = []
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
 
     for j in Muts2:
             cds_feature = get_cds_feature_with_qualifier_value(genome_record, "product", j)
@@ -439,7 +439,7 @@ smr_prot = []
 smr_AA_Seq = []
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Downloads/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
 
     for j in smr:
             cds_feature = get_cds_feature_with_qualifier_value(genome_record, "product", j)
@@ -488,7 +488,7 @@ hypo_prot = []
 hypo_AA_Seq = []
 
 for i in range(len(locus)):
-    genome_record = SeqIO.read("/Users/jonlusk/Desktop/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
+    genome_record = SeqIO.read("/Users/jonpitsch/Desktop/genbank files/"+species+'_'+str(locus[i])+'_'+str(i)+".gbk", "genbank")
 
     for j in hypo:
             cds_feature = get_cds_feature_with_qualifier_value(genome_record, "product", j)
@@ -528,8 +528,8 @@ print(len(hypo_prot))
 # In[190]:
 
 
-#df_ncbi = pd.read_csv('/Users/jonlusk/Desktop/borrelia_ncbi.csv')
-df_ncbi = pd.read_csv('/Users/jonlusk/Desktop/'+species+'_descriptions_with_accession_values.csv')
+#df_ncbi = pd.read_csv('/Users/jonpitsch/Desktop/borrelia_ncbi.csv')
+df_ncbi = pd.read_csv('/Users/jonpitsch/Desktop/'+species+'_descriptions_with_accession_values.csv')
 
 
 # In[191]:
@@ -588,7 +588,7 @@ df_ncbi_mass_pull['NCBI GenBank URL'] = seq_url
 # In[195]:
 
 
-df_ncbi_mass_pull.to_csv('/Users/jonlusk/Desktop/NCBI_'+species+'_mass_pull_new.csv', index=False)
+df_ncbi_mass_pull.to_csv('/Users/jonpitsch/Desktop/NCBI_'+species+'_mass_pull_new.csv', index=False)
 
 
 # In[ ]:
@@ -647,10 +647,10 @@ print(score)
 # In[173]:
 
 
-#df_new = pd.read_csv('/Users/jonlusk/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Borrelia_mass_pull_new_with_percentmatch.csv')
-#df_new = df_new = pd.read_csv('/Users/jonlusk/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Borreliella_mass_pull_new_with_percentmatch.csv')
-#df_new = df_new = pd.read_csv('/Users/jonlusk/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Leptospira_mass_pull_new_with_percentmatch.csv')
-df_new = df_new = pd.read_csv('/Users/jonlusk/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Treponema_mass_pull_new_with_percentmatch.csv')
+#df_new = pd.read_csv('/Users/jonpitsch/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Borrelia_mass_pull_new_with_percentmatch.csv')
+#df_new = df_new = pd.read_csv('/Users/jonpitsch/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Borreliella_mass_pull_new_with_percentmatch.csv')
+#df_new = df_new = pd.read_csv('/Users/jonpitsch/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Leptospira_mass_pull_new_with_percentmatch.csv')
+df_new = df_new = pd.read_csv('/Users/jonpitsch/Downloads/Re_ NCBI Scraper - Strain column added/NCBI_Treponema_mass_pull_new_with_percentmatch.csv')
 
 df_new
 
@@ -857,11 +857,11 @@ df_drop
 # In[179]:
 
 
-#df_drop.to_csv('/Users/jonlusk/Desktop/NCBI_Treponema_mass_pull_new_with_bestmatch.csv')
-#df_new.to_csv('/Users/jonlusk/Desktop/NCBI_Borrelia_mass_pull_new_with_bestmatch_new.csv')
-#df_new.to_csv('/Users/jonlusk/Desktop/NCBI_Borreliella_mass_pull_new_with_bestmatch_new.csv')
-#df_new.to_csv('/Users/jonlusk/Desktop/NCBI_Leptospira_mass_pull_new_with_bestmatch.csv')
-#df_new.to_csv('/Users/jonlusk/Desktop/NCBI_Treponema_mass_pull_new_with_bestmatch.csv')
+#df_drop.to_csv('/Users/jonpitsch/Desktop/NCBI_Treponema_mass_pull_new_with_bestmatch.csv')
+#df_new.to_csv('/Users/jonpitsch/Desktop/NCBI_Borrelia_mass_pull_new_with_bestmatch_new.csv')
+#df_new.to_csv('/Users/jonpitsch/Desktop/NCBI_Borreliella_mass_pull_new_with_bestmatch_new.csv')
+#df_new.to_csv('/Users/jonpitsch/Desktop/NCBI_Leptospira_mass_pull_new_with_bestmatch.csv')
+#df_new.to_csv('/Users/jonpitsch/Desktop/NCBI_Treponema_mass_pull_new_with_bestmatch.csv')
 
 
 # In[ ]:
