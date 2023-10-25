@@ -6,4 +6,4 @@
 
 * The 'Useful Bioinformatics Tools and Commands'.md file is a resource that contains solutions for unique problems that I've encountered as a bioinformatician.
 
-* The 'Guide to GATK Best Practices ...'.pdf is a document that I found from IBM. It contains a lot of useful information about using GATK properly. 
+* The 'Guide to GATK Best Practices ...'.pdf is a document that I found from IBM. It is a great resource that explains how to use GATK properly. 
