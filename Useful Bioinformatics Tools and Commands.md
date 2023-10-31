@@ -111,7 +111,7 @@ To change the java memory in a toolkit in an environment, like picard, navigate 
 
 <img width="513" alt="Screen Shot 2023-02-10 at 3 33 43 PM" src="https://user-images.githubusercontent.com/105939034/218213691-93842c5e-310a-4e18-9783-7900642ec107.png">
 
-In the bin, there should be a bash file contcontaining the tool, like picard. 
+In the bin, there should be a bash file containing the tool, like picard. 
 
 <img width="1166" alt="Screen Shot 2023-02-10 at 3 32 35 PM" src="https://user-images.githubusercontent.com/105939034/218214182-67b29f62-2691-412d-ba75-390df225bf62.png">
 
