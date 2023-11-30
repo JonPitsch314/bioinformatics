@@ -180,3 +180,9 @@ If you need to extract data from a corrupted gzip file, like an incomplete VCF f
 For me, I ran this command:
 
     gunzip < WES_force_called_dilutions.vcf.gz > WES_force_called_dilutions.vcf
+
+## Extract all CIGAR strings from BAM file
+
+This command will create an output .txt file that contains the CIAGR strings from all reads in a BAM.
+
+    samtools view your_bamfile.bam | cut -f 6 > your_textfile.txt
