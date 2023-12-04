@@ -186,3 +186,9 @@ For me, I ran this command:
 This command will create an output .txt file that contains the CIAGR strings from all reads in a BAM.
 
     samtools view your_bamfile.bam | cut -f 6 > your_textfile.txt
+
+## Split Multiallelic Sites
+
+If you need to split multiallelic sites into different rows, run this command:
+
+    bcftools norm -N -m-any file.vcf.gz -o file_demulti.vcf.gz -O z -f ref.fa
